@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reflect – Privacy Policy</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #FAF8F3;
+      color: #1A1714;
+      line-height: 1.7;
+      padding: 40px 20px;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    h1 {
+      font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
+      color: #1A1714;
+      font-size: 2.2rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      margin-bottom: 6px;
+    }
+    .subtitle {
+      color: #8a8175;
+      font-size: 0.95rem;
+      margin-bottom: 40px;
+    }
+    h2 {
+      font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
+      color: #B8702E;
+      font-size: 1.15rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin: 36px 0 12px;
+    }
+    p { margin-bottom: 12px; color: #3a342d; }
+    ul { padding-left: 22px; color: #3a342d; margin-bottom: 12px; }
+    li { margin-bottom: 6px; }
+    strong { color: #1A1714; }
+    .highlight {
+      background: #F1EADD;
+      border-left: 3px solid #B8702E;
+      padding: 18px 22px;
+      border-radius: 0 8px 8px 0;
+      margin: 24px 0;
+    }
+    .highlight p { margin: 0; color: #1A1714; }
+    a { color: #B8702E; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .updated {
+      font-size: 0.82rem;
+      color: #a39a8c;
+      margin-top: 48px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body { background: #14110D; color: #E8E2D6; }
+      h1 { color: #F0E9DC; }
+      .subtitle { color: #7d756a; }
+      h2 { color: #D08A4A; }
+      p, ul { color: #cabfae; }
+      strong { color: #F0E9DC; }
+      .highlight { background: #1f1a13; border-left-color: #D08A4A; }
+      .highlight p { color: #F0E9DC; }
+      a { color: #D08A4A; }
+      .updated { color: #5c554b; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Reflect</h1>
+  <p class="subtitle">AI Journaling – Privacy Policy</p>
+
+  <div class="highlight">
+    <p><strong>Summary:</strong> Reflect is local-first. Your journal entries live <strong>on your device</strong> and are not uploaded to our servers — with one honest exception: when you tap <strong>Reflect</strong> on an entry, that entry's text (and the prompt) is sent to our AI proxy and on to Anthropic to generate a reflection. We do not keep your entries on the proxy beyond a short-lived, content-hashed cache used to avoid reprocessing the same request.</p>
+  </div>
+
+  <h2>1. General</h2>
+  <p>This privacy policy applies to the mobile app <strong>Reflect</strong> (referred to as "the App"). It describes what data the App processes, when, and why. No account is required to use the App.</p>
+
+  <h2>2. What Stays on Your Device</h2>
+  <p>Your journal entries, prompts, streaks, and settings are stored in a local database (SQLite) on your device. This data is not transmitted to us or anyone else, except for the explicit AI reflection request described in the next section.</p>
+
+  <h2>3. AI Reflections</h2>
+  <p>The AI reflection feature is <strong>opt-in per entry</strong>. It only runs when you actively tap the "Reflect" button. When you do:</p>
+  <ul>
+    <li>The entry's text and the associated prompt are sent over an encrypted connection to our AI proxy.</li>
+    <li>The proxy forwards them to <strong>Anthropic</strong> (our AI provider) to generate the reflection, which is returned to your device.</li>
+    <li>Requests are briefly cached by a content hash (to avoid reprocessing identical requests) and rate-limited by IP address to prevent abuse. We do not build profiles from your entries and do not retain them for any other purpose.</li>
+  </ul>
+  <p>If you never tap "Reflect", no entry content ever leaves your device.</p>
+
+  <h2>4. Purchases</h2>
+  <p>Subscriptions are handled by <strong>RevenueCat</strong> together with the Apple App Store and Google Play. We receive your subscription status (e.g. active / expired) so we can unlock paid features. We never receive or store your payment details.</p>
+
+  <h2>5. Analytics</h2>
+  <p>Analytics are <strong>optional and off unless a key is configured</strong>. When enabled, the App records anonymous product-usage events (for example: app opened, entry created, reflection used, paywall shown) via <strong>PostHog</strong>. The content of your journal entries is <strong>never</strong> included in analytics.</p>
+
+  <h2>6. What We Do Not Do</h2>
+  <ul>
+    <li>We do not sell your data.</li>
+    <li>We do not send your entries anywhere except the explicit AI reflection call you trigger.</li>
+    <li>We do not require an account or collect your identity.</li>
+  </ul>
+
+  <h2>7. Your Choices</h2>
+  <ul>
+    <li><strong>Export</strong> your data at any time (Settings &rarr; Export data).</li>
+    <li><strong>Delete</strong> all your data at any time (Settings &rarr; Delete all data) — this erases everything stored on the device.</li>
+    <li>Decline or revoke notification permission, and disable reminders, at any time.</li>
+  </ul>
+
+  <h2>8. Third Parties</h2>
+  <p>Anthropic (AI processing of reflections you request) · RevenueCat (subscription management) · PostHog (anonymous analytics, only if enabled).</p>
+
+  <h2>9. Children</h2>
+  <p>The App is not directed at children. No account is created, and entry content stays on the device unless you explicitly request a reflection.</p>
+
+  <h2>10. Changes to This Policy</h2>
+  <p>If anything changes about how data is handled, this policy will be updated and the date below revised.</p>
+
+  <h2>11. Contact</h2>
+  <p>If you have any questions about this privacy policy or your data, you can reach us at:</p>
+  <p><a href="https://github.com/Fruhji/reflect-web/issues">github.com/Fruhji/reflect-web</a></p>
+
+  <p class="updated">Last updated: June 2026</p>
+
+</body>
+</html>
