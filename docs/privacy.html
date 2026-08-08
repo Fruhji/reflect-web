@@ -79,58 +79,66 @@
   <h1 id="privacy" style="font-size: 1.6rem; margin-bottom: 18px;">Privacy Policy</h1>
 
   <div class="highlight">
-    <p><strong>Summary:</strong> Reflect is local-first. Your journal entries live <strong>on your device</strong> and are not uploaded to our servers — with one honest exception: when you tap <strong>Reflect</strong> on an entry, that entry's text (and the prompt) is sent to our AI proxy and on to Anthropic to generate a reflection. We do not keep your entries on the proxy beyond a short-lived, content-hashed cache used to avoid reprocessing the same request.</p>
+    <p><strong>Summary:</strong> Reflect is local-first. Your journal lives <strong>on your device</strong>. Entry text leaves it only when you explicitly request an <strong>AI reflection</strong> or <strong>weekly AI summary</strong>. The requested text is sent through our Cloudflare proxy to Anthropic. Our proxy does not store the input text; it caches only the generated response for up to 30 days under a key derived from a one-way hash of the request.</p>
   </div>
 
   <h2>1. General</h2>
-  <p>This privacy policy applies to the mobile app <strong>Reflect</strong> (referred to as "the App"). It describes what data the App processes, when, and why. No account is required to use the App.</p>
+  <p>This privacy policy applies to the mobile app <strong>Reflect</strong> (referred to as "the App"). It describes what data the App processes, when, and why. No Fruhji account is required. The controller is Fruhji; contact: <a href="mailto:hello@fruhji.com">hello@fruhji.com</a>.</p>
 
   <h2>2. What Stays on Your Device</h2>
-  <p>Your journal entries, prompts, streaks, and settings are stored in a local database (SQLite) on your device. This data is not transmitted to us or anyone else, except for the explicit AI reflection request described in the next section.</p>
+  <p>Your journal entries, prompts, locally generated reviews, saved voice audio, streaks, and settings are stored on your device. They are not transmitted to Fruhji except for the explicit AI requests described below. A plain export or encrypted backup is created locally and handed to the system share sheet; you choose where that file is stored.</p>
 
-  <h2>3. AI Reflections</h2>
-  <p>The AI reflection feature is <strong>opt-in per entry</strong>. It only runs when you actively tap the "Reflect" button. When you do:</p>
+  <h2>3. AI Reflections and Weekly AI Summaries</h2>
+  <p>Both AI features run only after an explicit request:</p>
   <ul>
-    <li>The entry's text, the associated prompt, and your selected app language (so the reflection comes back in that language) are sent over an encrypted connection to our AI proxy.</li>
-    <li>The proxy forwards them to <strong>Anthropic</strong> (our AI provider) to generate the reflection, which is returned to your device.</li>
-    <li>Requests are briefly cached by a content hash (to avoid reprocessing identical requests) and rate-limited by IP address to prevent abuse. We do not build profiles from your entries and do not retain them for any other purpose.</li>
+    <li>For a reflection, the selected entry text, its prompt, and the App language are sent over HTTPS.</li>
+    <li>For a weekly AI summary, the dates and text of the relevant week's entries plus the App language are sent over HTTPS.</li>
+    <li>Our Cloudflare proxy forwards the requested content to <strong>Anthropic</strong> and returns the generated result. Fruhji's application logs contain only technical usage information such as route, model, token counts, status, and duration — never journal text.</li>
+    <li>The proxy caches only the generated reflection or summary for up to 30 days. Its key is a SHA-256 hash of the request; the original entry text is not stored in the cache. Identical requests may therefore receive the cached result.</li>
   </ul>
-  <p>If you never tap "Reflect", no entry content ever leaves your device.</p>
+  <p>Anthropic states that commercial API inputs and outputs are normally deleted within 30 days, subject to the exceptions in its <a href="https://privacy.claude.com/en/articles/7996866-how-long-do-you-store-my-organization-s-data">current retention policy</a>, including legal and usage-policy enforcement. Do not include information you do not want processed by an AI provider. If you request neither feature, no journal text is sent to the proxy or Anthropic.</p>
 
-  <h2>4. Purchases</h2>
-  <p>Subscriptions are handled by <strong>RevenueCat</strong> together with the Apple App Store and Google Play. We receive your subscription status (e.g. active / expired) so we can unlock paid features. We never receive or store your payment details.</p>
+  <h2>4. Service Security and Usage Limits</h2>
+  <p>The proxy processes the IP address supplied by Cloudflare and a pseudonymous RevenueCat App User ID for abuse prevention, free-use limits, cost limits, and Pro entitlement checks. Daily counters expire after about 48 hours; rolling free-use counters expire after up to 14 days. A pseudonymous installation identifier and Apple App Attest or Google Play Integrity proof are processed to verify genuine App installations. These checks use a hash of the request body, not a stored copy of the journal text.</p>
 
-  <h2>5. Analytics</h2>
-  <p>Analytics are <strong>optional and off unless a key is configured</strong>. When enabled, the App records anonymous product-usage events (for example: app opened, entry created, reflection used, paywall shown) via <strong>PostHog</strong>. The content of your journal entries is <strong>never</strong> included in analytics.</p>
+  <h2>5. Purchases</h2>
+  <p>Subscriptions are handled by <strong>RevenueCat</strong> together with the Apple App Store and Google Play. RevenueCat processes a pseudonymous App User ID, subscription and transaction information, and basic technical context to determine entitlement status. Fruhji does not receive your payment-card or bank details.</p>
 
-  <h2>6. What We Do Not Do</h2>
+  <h2>6. Product Analytics</h2>
+  <p>The production App uses <strong>PostHog EU Cloud</strong> for pseudonymous product-usage events such as app opened, entry created, reflection used, weekly summary generated, backup created, or paywall shown. The SDK also supplies technical context such as App, operating-system, and device information. We never add journal text, prompts, voice audio, or generated AI content to analytics events. Analytics is used to understand whether features work and are useful, not for advertising.</p>
+
+  <h2>7. What We Do Not Do</h2>
   <ul>
     <li>We do not sell your data.</li>
-    <li>We do not send your entries anywhere except the explicit AI reflection call you trigger.</li>
-    <li>We do not require an account or collect your identity.</li>
+    <li>We do not send journal text anywhere except the AI reflection or weekly AI summary you explicitly request.</li>
+    <li>We do not use journal content for advertising or product analytics.</li>
+    <li>We do not require a Fruhji account.</li>
   </ul>
 
-  <h2>7. Your Choices</h2>
+  <h2>8. Your Choices and Deletion</h2>
   <ul>
     <li><strong>Export</strong> your data at any time (Settings &rarr; Export data).</li>
-    <li><strong>Delete</strong> all your data at any time (Settings &rarr; Delete all data) — this erases everything stored on the device.</li>
+    <li><strong>Delete</strong> App data at any time (Settings &rarr; Delete all data). This erases data inside the App, but not export or backup files you previously saved elsewhere, store purchase records, or already created provider records and response caches. Delete external files at their chosen destination.</li>
     <li>Decline or revoke notification permission, and disable reminders, at any time.</li>
   </ul>
 
-  <h2>8. Third Parties</h2>
-  <p>Anthropic (AI processing of reflections you request) · RevenueCat (subscription management) · PostHog (anonymous analytics, only if enabled).</p>
+  <h2>9. Providers and International Transfers</h2>
+  <p>Cloudflare (proxy, response cache, limits, and installation integrity) · Anthropic (requested AI processing) · RevenueCat (subscriptions) · PostHog EU Cloud (pseudonymous product analytics) · Apple or Google (store payments and platform integrity). Where processing involves a transfer outside your country, the provider's applicable data-transfer safeguards apply.</p>
 
-  <h2>9. Children</h2>
-  <p>The App is not directed at children. No account is created, and entry content stays on the device unless you explicitly request a reflection.</p>
+  <h2>10. Legal Basis and Your Rights</h2>
+  <p>We process requested AI and subscription data to provide the contract, and security and pseudonymous analytics data for our legitimate interests in a secure, reliable, and useful service. Depending on where you live, you may have rights to access, correction, deletion, restriction, portability, objection, and complaint to a supervisory authority. Because Reflect has no Fruhji account, a request may require the relevant pseudonymous identifier.</p>
 
-  <h2>10. Changes to This Policy</h2>
+  <h2>11. Children</h2>
+  <p>The App is not directed at children. No Fruhji account is created, and journal text stays on the device unless an AI feature is explicitly requested.</p>
+
+  <h2>12. Changes to This Policy</h2>
   <p>If anything changes about how data is handled, this policy will be updated and the date below revised.</p>
 
-  <h2>11. Contact</h2>
+  <h2>13. Contact</h2>
   <p>If you have any questions about this privacy policy or your data, you can reach us at:</p>
-  <p><a href="https://github.com/Fruhji/reflect-web/issues">github.com/Fruhji/reflect-web</a></p>
+  <p><a href="mailto:hello@fruhji.com">hello@fruhji.com</a></p>
 
-  <p class="updated">Last updated: June 2026</p>
+  <p class="updated">Last updated: August 8, 2026</p>
 
   <h1 id="terms" style="font-size: 1.6rem; margin: 56px 0 18px;">Terms of Use (EULA)</h1>
   <p class="subtitle" style="margin-bottom: 24px;">Also available as a standalone page: <a href="terms">Terms of Use</a></p>
@@ -152,7 +160,7 @@
   </ul>
 
   <h2>4. Your Content</h2>
-  <p>Everything you write in the App belongs to you. Your entries are stored locally on your device and are only transmitted when you explicitly request an AI reflection, as described in the Privacy Policy above. We claim no ownership of, and no rights to, your journal content. You are responsible for keeping your device and any exports of your data secure.</p>
+  <p>Everything you write in the App belongs to you. Your entries are stored locally on your device and are transmitted only when you explicitly request an AI reflection or weekly AI summary, as described in the Privacy Policy above. We claim no ownership of, and no rights to, your journal content. You are responsible for keeping your device and any exports or backups of your data secure.</p>
 
   <h2>5. AI Reflections Are Not Advice</h2>
   <p>AI reflections and weekly summaries are generated by a language model. They are offered as prompts for your own thinking and may be inaccurate, incomplete, or not appropriate to your situation. They are <strong>not</strong> medical, psychological, therapeutic, legal, or financial advice, and are no substitute for professional help. If you are in crisis or concerned about your mental health, please contact a qualified professional or a local emergency service.</p>
@@ -177,9 +185,9 @@
 
   <h2>12. Contact</h2>
   <p>Questions about these Terms? Reach us at:</p>
-  <p><a href="https://github.com/Fruhji/reflect-web/issues">github.com/Fruhji/reflect-web</a></p>
+  <p><a href="mailto:hello@fruhji.com">hello@fruhji.com</a></p>
 
-  <p class="updated">Last updated: June 2026</p>
+  <p class="updated">Last updated: August 8, 2026</p>
 
 </body>
 </html>
