@@ -2,11 +2,15 @@
 
 Public web assets for the **Reflect** journaling app.
 
-Currently this hosts the privacy policy via GitHub Pages:
+The primary site is deployed as Cloudflare Worker static assets:
 
-- **Privacy Policy:** https://fruhji.github.io/reflect-web/privacy
+- **Home:** https://reflect-site.fruhji.workers.dev/
+- **Privacy Policy:** https://reflect-site.fruhji.workers.dev/privacy
+- **Terms:** https://reflect-site.fruhji.workers.dev/terms
+- **Support:** https://reflect-site.fruhji.workers.dev/support
 
-The page lives in [`docs/privacy.html`](docs/privacy.html) and is deployed by the
-`Deploy GitHub Pages` workflow on every push to `main`.
+The pages live in [`docs/`](docs/), and `wrangler.jsonc` defines the Cloudflare
+deployment. The GitHub Pages workflow remains only to serve compatibility redirects
+from old `fruhji.github.io` links to the Cloudflare site.
 
 The app itself lives in a separate, private repository.

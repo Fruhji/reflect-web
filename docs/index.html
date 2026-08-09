@@ -7,6 +7,10 @@
   <meta name="description" content="Reflect is a local-first journal for people who want to think clearly. Thoughtful prompts and explicitly requested AI reflections. On the App Store and Google Play.">
   <script>
     (function () {
+      if (window.location.hostname === "fruhji.github.io") {
+        window.location.replace("https://reflect-site.fruhji.workers.dev/");
+        return;
+      }
       var APP_STORE = "https://apps.apple.com/app/id6779113415";
       var PLAY_STORE = "https://play.google.com/store/apps/details?id=com.fruhji.reflect";
       var ua = navigator.userAgent || navigator.vendor || "";
@@ -66,7 +70,7 @@
     <nav class="links">
       <a href="privacy">Privacy Policy</a>
       <a href="terms">Terms of Use</a>
-      <a href="https://github.com/Fruhji/reflect-web/issues">Support</a>
+      <a href="/support">Support</a>
     </nav>
   </main>
 </body>
