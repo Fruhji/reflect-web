@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Impressum — Reflect</title>
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#FAF8F3">
+<style>
+  :root{
+    --paper:#FAF8F3; --sunk:#F1ECE2; --ink:#1A1714; --muted:#6B6258;
+    --rule:#E4DCCF; --accent-ink:#8A5220;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#14110D; --sunk:#1E1A15; --ink:#E8E2D6; --muted:#A39A8C;
+      --rule:#2C261E; --accent-ink:#D08A4A;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#14110D; --sunk:#1E1A15; --ink:#E8E2D6; --muted:#A39A8C;
+    --rule:#2C261E; --accent-ink:#D08A4A;
+  }
+  *{box-sizing:border-box; margin:0; padding:0}
+  body{
+    background:var(--paper); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    font-size:17px; line-height:1.7; padding:40px 24px 64px;
+    max-width:37rem; margin:0 auto; -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent-ink)}
+  .back{font-size:14px; color:var(--muted); text-decoration:none; display:inline-block; margin-bottom:28px}
+  .back:hover{color:var(--ink)}
+  h1{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+     font-weight:600; font-size:34px; line-height:1.15; margin-bottom:26px}
+  h2{font-size:13px; font-weight:700; letter-spacing:.12em; text-transform:uppercase;
+     color:var(--accent-ink); margin:32px 0 8px}
+  address{font-style:normal; background:var(--sunk); border:1px solid var(--rule);
+    border-radius:14px; padding:20px 22px}
+  p{color:var(--muted)}
+  p strong{color:var(--ink); font-weight:600}
+  footer{margin-top:44px; padding-top:20px; border-top:1px solid var(--rule); font-size:14px; color:var(--muted)}
+  :focus-visible{outline:2px solid var(--accent-ink); outline-offset:3px; border-radius:4px}
+</style>
+</head>
+<body>
+  <a class="back" href="/">&larr; Reflect</a>
+  <h1>Impressum</h1>
+
+  <h2>Angaben gemäß § 5 DDG</h2>
+  <address>
+    Leon Mons<br>
+    Ziegeleistraße 1<br>
+    49086 Osnabrück<br>
+    Deutschland<br><br>
+    E-Mail: <a href="mailto:hello@fruhji.com">hello@fruhji.com</a>
+  </address>
+
+  <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
+  <p><strong>Leon Mons</strong>, Anschrift wie oben.</p>
+
+  <h2>Verbraucherstreitbeilegung</h2>
+  <p>Wir sind nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren
+     vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+
+  <footer>
+    <a href="/">Startseite</a> · <a href="/privacy">Datenschutz</a> ·
+    <a href="/terms">Nutzungsbedingungen</a> · <a href="/support">Support</a>
+  </footer>
+</body>
+</html>
