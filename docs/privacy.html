@@ -1,202 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script>
-    if (window.location.hostname === "fruhji.github.io") {
-      window.location.replace("https://reflect-site.fruhji.workers.dev/privacy");
-    }
-  </script>
-  <title>Reflect – Privacy Policy &amp; Terms of Use</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #FAF8F3;
-      color: #1A1714;
-      line-height: 1.7;
-      padding: 40px 20px;
-      max-width: 720px;
-      margin: 0 auto;
-    }
-    h1 {
-      font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
-      color: #1A1714;
-      font-size: 2.2rem;
-      font-weight: 600;
-      letter-spacing: 0.01em;
-      margin-bottom: 6px;
-    }
-    .subtitle {
-      color: #8a8175;
-      font-size: 0.95rem;
-      margin-bottom: 40px;
-    }
-    h2 {
-      font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
-      color: #B8702E;
-      font-size: 1.15rem;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      margin: 36px 0 12px;
-    }
-    p { margin-bottom: 12px; color: #3a342d; }
-    ul { padding-left: 22px; color: #3a342d; margin-bottom: 12px; }
-    li { margin-bottom: 6px; }
-    strong { color: #1A1714; }
-    .highlight {
-      background: #F1EADD;
-      border-left: 3px solid #B8702E;
-      padding: 18px 22px;
-      border-radius: 0 8px 8px 0;
-      margin: 24px 0;
-    }
-    .highlight p { margin: 0; color: #1A1714; }
-    a { color: #B8702E; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .updated {
-      font-size: 0.82rem;
-      color: #a39a8c;
-      margin-top: 48px;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      body { background: #14110D; color: #E8E2D6; }
-      h1 { color: #F0E9DC; }
-      .subtitle { color: #7d756a; }
-      h2 { color: #D08A4A; }
-      p, ul { color: #cabfae; }
-      strong { color: #F0E9DC; }
-      .highlight { background: #1f1a13; border-left-color: #D08A4A; }
-      .highlight p { color: #F0E9DC; }
-      a { color: #D08A4A; }
-      .updated { color: #5c554b; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reflect – Seite umgezogen</title>
+<!--
+  Nur noch eine Weiterleitung auf reflect.fruhji.com (seit 13.11.2026).
+  GitHub Pages kann keine HTTP-Weiterleitung, deshalb meta refresh, rel=canonical
+  und ein sichtbarer Link; alle drei wirken ohne JavaScript.
+  Der fruehere Inhalt steht in der Git-Historie.
+-->
+<meta http-equiv="refresh" content="0; url=https://reflect.fruhji.com/privacy">
+<link rel="canonical" href="https://reflect.fruhji.com/privacy">
+<style>
+body { font-family: system-ui, -apple-system, sans-serif; max-width: 34rem; margin: 4rem auto; padding: 0 1rem; line-height: 1.5; color: #1c1c1e; background: #ffffff; }
+a { color: #0a58ca; }
+@media (prefers-color-scheme: dark) { body { color: #f2f2f7; background: #1c1c1e; } a { color: #8ab4ff; } }
+</style>
 </head>
 <body>
-
-  <h1>Reflect</h1>
-  <p class="subtitle">AI Journaling – <a href="#privacy">Privacy Policy</a> &amp; <a href="#terms">Terms of Use</a></p>
-
-  <h1 id="privacy" style="font-size: 1.6rem; margin-bottom: 18px;">Privacy Policy</h1>
-
-  <div class="highlight">
-    <p><strong>Summary:</strong> Reflect is local-first. Your journal lives <strong>on your device</strong>. Entry text leaves it only when you explicitly request an <strong>AI reflection</strong> or <strong>weekly AI summary</strong>. The requested text is sent through our Cloudflare proxy to Anthropic. Our proxy does not store the input text; it caches only the generated response for up to 30 days under a key derived from a one-way hash of the request.</p>
-  </div>
-
-  <h2>1. General</h2>
-  <p>This privacy policy applies to the mobile app <strong>Reflect</strong> (referred to as "the App"). It describes what data the App processes, when, and why. No Fruhji account is required. The controller is Fruhji; contact: <a href="mailto:reflect@aiphotocleaner.app">reflect@aiphotocleaner.app</a>.</p>
-
-  <h2>2. What Stays on Your Device</h2>
-  <p>Your journal entries, prompts, locally generated reviews, saved voice audio, streaks, and settings are stored on your device. They are not transmitted to Fruhji except for the explicit AI requests described below. Dictation is the one case in which speech leaves the App before it becomes text &mdash; see section 3. A plain export or encrypted backup is created locally and handed to the system share sheet; you choose where that file is stored.</p>
-
-  <h2>3. Dictation and Speech Recognition</h2>
-  <p>When you dictate an entry, the App uses the <strong>speech recognition built into your operating system</strong> &mdash; Apple's on iOS, Google's on Android. Whether that recognition happens on the device or on the provider's servers is decided by the platform and your device settings; the App does not force either mode, so your speech may be transmitted to and processed by <strong>Apple</strong> or <strong>Google</strong> under their own privacy policies. The App receives only the recognized text, which then becomes part of your entry and is treated like any other entry text described in this policy. Microphone access is requested the first time you dictate and can be withdrawn at any time in your system settings; without it, dictation is unavailable and the rest of the App is unaffected.</p>
-  <p>Dictation produces text only. The App does not keep an audio file of a dictated entry. Audio recordings saved by older Reflect releases remain on your device and are never uploaded by the App.</p>
-
-  <h2>4. AI Reflections and Weekly AI Summaries</h2>
-  <p>Both AI features run only after an explicit request:</p>
-  <ul>
-    <li>For a reflection, the selected entry text, its prompt, and the App language are sent over HTTPS.</li>
-    <li>For a weekly AI summary, the dates and text of the relevant week's entries plus the App language are sent over HTTPS.</li>
-    <li>Our Cloudflare proxy forwards the requested content to <strong>Anthropic</strong> and returns the generated result. Fruhji's application logs contain only technical usage information such as route, model, token counts, status, and duration — never journal text.</li>
-    <li>The proxy caches only the generated reflection or summary for up to 30 days. Its key is a SHA-256 hash of the request; the original entry text is not stored in the cache. Identical requests may therefore receive the cached result.</li>
-  </ul>
-  <p>Anthropic states that commercial API inputs and outputs are normally deleted within 30 days, subject to the exceptions in its <a href="https://privacy.claude.com/en/articles/7996866-how-long-do-you-store-my-organization-s-data">current retention policy</a>, including legal and usage-policy enforcement. Do not include information you do not want processed by an AI provider. If you request neither feature, no journal text is sent to the proxy or Anthropic.</p>
-
-  <h2>5. Service Security and Usage Limits</h2>
-  <p>The proxy processes the IP address supplied by Cloudflare and a pseudonymous RevenueCat App User ID for abuse prevention, free-use limits, cost limits, and Pro entitlement checks. Daily counters expire after about 48 hours; rolling free-use counters expire after up to 14 days. App versions before 3.5.3 additionally send a pseudonymous installation identifier and an Apple App Attest or Google Play Integrity proof to verify genuine installations; current versions no longer send these, and the proxy only verifies such proofs from older installations. These checks use a hash of the request body, not a stored copy of the journal text.</p>
-
-  <h2>6. Purchases</h2>
-  <p>Subscriptions are handled by <strong>RevenueCat</strong> together with the Apple App Store and Google Play. RevenueCat processes a pseudonymous App User ID, subscription and transaction information, and basic technical context to determine entitlement status. Fruhji does not receive your payment-card or bank details.</p>
-
-  <h2>7. Product Analytics</h2>
-  <p>The production App uses <strong>PostHog EU Cloud</strong> for pseudonymous product-usage events such as app opened, entry created, reflection used, weekly summary generated, backup created, or paywall shown. The SDK also supplies technical context such as App, operating-system, and device information. We never add journal text, prompts, voice audio, or generated AI content to analytics events. Analytics is used to understand whether features work and are useful, not for advertising.</p>
-
-  <h2>8. What We Do Not Do</h2>
-  <ul>
-    <li>We do not sell your data.</li>
-    <li>We do not send journal text anywhere except the AI reflection or weekly AI summary you explicitly request. (Dictated speech reaches your platform's speech recognition before it becomes text &mdash; see section 3.)</li>
-    <li>We do not use journal content for advertising or product analytics.</li>
-    <li>We do not require a Fruhji account.</li>
-  </ul>
-
-  <h2>9. Your Choices and Deletion</h2>
-  <ul>
-    <li><strong>Export</strong> your data at any time (Settings &rarr; Export data).</li>
-    <li><strong>Delete</strong> App data at any time (Settings &rarr; Delete all data). This erases data inside the App, but not export or backup files you previously saved elsewhere, store purchase records, or already created provider records and response caches. Delete external files at their chosen destination.</li>
-    <li>Decline or revoke notification permission, and disable reminders, at any time.</li>
-  </ul>
-
-  <h2>10. Providers and International Transfers</h2>
-  <p>Cloudflare (proxy, response cache, limits, and installation integrity) · Anthropic (requested AI processing) · RevenueCat (subscriptions) · PostHog EU Cloud (pseudonymous product analytics) · Apple or Google (store payments, platform integrity, and speech recognition when you dictate). Where processing involves a transfer outside your country, the provider's applicable data-transfer safeguards apply.</p>
-
-  <h2>11. Legal Basis and Your Rights</h2>
-  <p>We process requested AI and subscription data to provide the contract, and security and pseudonymous analytics data for our legitimate interests in a secure, reliable, and useful service. Depending on where you live, you may have rights to access, correction, deletion, restriction, portability, objection, and complaint to a supervisory authority. Because Reflect has no Fruhji account, a request may require the relevant pseudonymous identifier.</p>
-
-  <h2>12. Children</h2>
-  <p>The App is not directed at children. No Fruhji account is created, and journal text stays on the device unless an AI feature is explicitly requested.</p>
-
-  <h2>13. Changes to This Policy</h2>
-  <p>If anything changes about how data is handled, this policy will be updated and the date below revised.</p>
-
-  <h2>14. Contact</h2>
-  <p>If you have any questions about this privacy policy or your data, you can reach us at:</p>
-  <p><a href="mailto:reflect@aiphotocleaner.app">reflect@aiphotocleaner.app</a></p>
-
-  <p class="updated">Last updated: August 19, 2026</p>
-
-  <h1 id="terms" style="font-size: 1.6rem; margin: 56px 0 18px;">Terms of Use (EULA)</h1>
-  <p class="subtitle" style="margin-bottom: 24px;">Also available as a standalone page: <a href="terms">Terms of Use</a></p>
-
-  <h2>1. Acceptance of These Terms</h2>
-  <p>These Terms of Use ("Terms") govern your use of the mobile app <strong>Reflect</strong> ("the App"). By downloading or using the App you agree to these Terms. If you do not agree, do not use the App.</p>
-
-  <h2>2. License</h2>
-  <p>You are granted a personal, non-exclusive, non-transferable, revocable license to use the App on devices you own or control, for your own personal, non-commercial use. Where the App is distributed through the Apple App Store, Apple's <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Licensed Application End User License Agreement (standard EULA)</a> applies in addition to these Terms; where these Terms grant you more rights, these Terms prevail.</p>
-
-  <h2>3. Subscriptions (Reflect Pro)</h2>
-  <p>The core journaling features of the App are free. <strong>Reflect Pro</strong> is an optional auto-renewable subscription (monthly or annual) that unlocks unlimited AI reflections and the deeper weekly AI summary.</p>
-  <ul>
-    <li><strong>Free trial:</strong> New subscribers get a 7-day free trial. You will not be charged if you cancel before the trial ends.</li>
-    <li><strong>Billing:</strong> Payment is charged to your Apple App Store or Google Play account at confirmation of purchase (or at the end of the free trial). The price is always shown in the App before you confirm.</li>
-    <li><strong>Auto-renewal:</strong> The subscription renews automatically for the same period and price unless auto-renewal is turned off at least 24 hours before the end of the current period.</li>
-    <li><strong>Managing &amp; cancelling:</strong> You can manage or cancel the subscription at any time in your App Store or Google Play account settings. Deleting the App does not cancel a subscription.</li>
-    <li><strong>Refunds:</strong> Refunds are handled by Apple or Google under their respective store policies.</li>
-  </ul>
-
-  <h2>4. Your Content</h2>
-  <p>Everything you write in the App belongs to you. Your entries are stored locally on your device and are transmitted only when you explicitly request an AI reflection or weekly AI summary, as described in the Privacy Policy above. We claim no ownership of, and no rights to, your journal content. You are responsible for keeping your device and any exports or backups of your data secure.</p>
-
-  <h2>5. AI Reflections Are Not Advice</h2>
-  <p>AI reflections and weekly summaries are generated by a language model. They are offered as prompts for your own thinking and may be inaccurate, incomplete, or not appropriate to your situation. They are <strong>not</strong> medical, psychological, therapeutic, legal, or financial advice, and are no substitute for professional help. If you are in crisis or concerned about your mental health, please contact a qualified professional or a local emergency service.</p>
-
-  <h2>6. Acceptable Use</h2>
-  <p>You agree not to misuse the App or its AI service — including attempting to disrupt or overload the service, circumvent rate limits or subscription gating, reverse engineer the App except where permitted by law, or use the AI service for purposes unrelated to journaling in the App.</p>
-
-  <h2>7. Availability and Changes</h2>
-  <p>We may improve, change, or discontinue features of the App (including the AI service) at any time. The AI reflection feature depends on third-party providers and an internet connection and may be temporarily unavailable. Your journal itself works offline and remains on your device.</p>
-
-  <h2>8. Disclaimer of Warranties</h2>
-  <p>The App is provided "as is" and "as available", without warranties of any kind, express or implied, to the maximum extent permitted by applicable law. We do not warrant that the App will be uninterrupted, error-free, or that AI output will be accurate or fit for a particular purpose.</p>
-
-  <h2>9. Limitation of Liability</h2>
-  <p>To the maximum extent permitted by applicable law, we are liable without limitation only for damages caused by intent or gross negligence, and for injury to life, body, or health. For slight negligence we are liable only for breaches of essential contractual obligations, limited to the foreseeable damage typical for this type of contract. Mandatory statutory liability (including under product liability law) remains unaffected. Nothing in these Terms limits rights you have as a consumer under mandatory law.</p>
-
-  <h2>10. Changes to These Terms</h2>
-  <p>We may update these Terms from time to time, for example when features change. The current version is always available at this address, and the date below shows when it was last revised. If you continue using the App after a change takes effect, the updated Terms apply.</p>
-
-  <h2>11. Governing Law</h2>
-  <p>These Terms are governed by the laws of the Federal Republic of Germany, excluding its conflict-of-law rules. Mandatory consumer-protection provisions of the country in which you live remain unaffected.</p>
-
-  <h2>12. Contact</h2>
-  <p>Questions about these Terms? Reach us at:</p>
-  <p><a href="mailto:reflect@aiphotocleaner.app">reflect@aiphotocleaner.app</a></p>
-
-  <p class="updated">Last updated: August 8, 2026</p>
-
+<p>Diese Seite ist umgezogen: <a href="https://reflect.fruhji.com/privacy">reflect.fruhji.com/privacy</a></p>
+<p>This page has moved: <a href="https://reflect.fruhji.com/privacy">reflect.fruhji.com/privacy</a></p>
 </body>
 </html>
